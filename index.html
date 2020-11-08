@@ -11,7 +11,7 @@
 <body>
     <div class="container">
         <div class="weather-app">
-<form id="search-form" class="mb-5">
+<form id="search-form" class="mb-3">
     <div class="row">
         <div class="col-9">
 <input
@@ -28,11 +28,12 @@ class="btn btn-primary"
 />
 </div>
 </div>
+</form>
             <div class="weather-app-wrapper">   
                 <div class="overview"> 
 <h1 id = "city"></h1>
 <ul>
-    <li id="date"></li>
+    <li>Last updated: <span id="date"></span></li>
     <li id ="description"></li>
 </ul>
 </div>
@@ -63,6 +64,10 @@ id="icon"
 </div>
 </div>
 </div>
+
+<div class="row weather-forecast" id="forecast">
+</div>
+
 </div>
 <small><a href="https://github.com/laurappl/vanilla-weather-app" target="_blank">Open-source code</a> by Laura Parpillon</small>
 
