@@ -60,6 +60,8 @@ function displayTemperature (response) {
     let iconElement = document.querySelector("#icon");
     iconElement.setAttribute("src", iconLink);
     iconElement.setAttribute("alt", `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png` );
+   celciusTemperature = response.data.main.temp;
+   
     // console.log(response.data);
 }
 
@@ -78,7 +80,32 @@ Search(cityInputElement.value);
 //console.log(cityInputElement.value);
 }
 
-Search("Zürich");
+function showFahrenheitTemperature (event) {
+    event.preventDefault();
+    let fahrenheitTemperature = (celciusTemperature * 9)/5 + 32;
+let temperatureElement = document.querySelector("#temperature");
+celciusLink.classList.remove("active");
+fahrenheitLink.classList.add("active");
+temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function showCelciusTemperature (event) {
+    event.preventDefault();
+    let temperatureElement = document.querySelector("#temperature");
+    celciusLink.classList.add("active");
+fahrenheitLink.classList.remove("active");
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
+}
+
+let celciusTemperature = null;
+
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-temp");
+fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
+
+let celciusLink = document.querySelector("#celcius-temp");
+celciusLink.addEventListener("click", showCelciusTemperature);
+Search("Zürich");
