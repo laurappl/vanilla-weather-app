@@ -63,10 +63,22 @@ function displayTemperature (response) {
     // console.log(response.data);
 }
 
-let apiKey = "ab133fb9369951af7d1e6bff8e77458d";
-let units = "metric";
-let city = "Meilen";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+function Search (city) {
 
-axios.get(apiUrl).then(displayTemperature);
+    let apiKey = "ab133fb9369951af7d1e6bff8e77458d";
+    let units = "metric";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(displayTemperature);
+}
 
+function handleSubmit (event) {
+    event.preventDefault();
+let cityInputElement = document.querySelector("#city-input");
+Search(cityInputElement.value);
+//console.log(cityInputElement.value);
+}
+
+Search("Zürich");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
