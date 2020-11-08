@@ -1,3 +1,14 @@
+a {
+
+    color: #FCD1DA;
+}
+
+a:hover {
+
+    color: #d3697e;
+    text-decoration: none;
+}
+
 body {
     font-family: "Google Sans", arial, sans-serif;
 }
@@ -32,6 +43,25 @@ ul{
     padding: 0;
     margin: 0;
 }
+
+.btn-primary {
+background-color:#FCD1DA;
+border: #FCD1DA;
+
+}
+.quote {
+    color:#d3697e;
+    font-size: 25px;
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+    }
+
+    .small {
+
+        max-width: 800px;
+        margin-bottom: 3px;
+    }
+
 
 .small-cap {
     text-transform: lowercase;
@@ -98,10 +128,12 @@ cursor: default;
 .weather-app {
 margin: 30px auto;
 padding: 20px 16px 24px;
-border: 1px solid #dfe1e5;
+border: 1px solid #FCD1DA;
 border-radius: 8px;
+max-width: 800px;
 }
 
+/*
 .weather-app-wrapper {
     max-width: 600px;
    }
