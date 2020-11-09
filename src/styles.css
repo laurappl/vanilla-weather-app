@@ -20,6 +20,11 @@ line-height: 28px;
 margin-bottom: 0;
 }
 
+h2 {
+color: rgb(186, 186, 186);
+font-size: 12px;
+}
+
 h3 {    
 color: rgb(186, 186, 186);
 display: inline;
