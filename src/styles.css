@@ -58,6 +58,11 @@ border: #FCD1DA;
     background-color:#d3697e;
 
 }
+
+.fa-heart {
+
+    font-size: 20px;
+}
 .footer {
     max-width: 800px;
     margin: 0 auto 3px;
