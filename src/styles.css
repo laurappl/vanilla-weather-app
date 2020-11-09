@@ -72,7 +72,8 @@ border: #FCD1DA;
     font-size: 30px;
     font-family: 'Grand Hotel', cursive;
     text-align: center;
-    position: relative;
+    align-items: center;
+display: flex;
     
           }
 

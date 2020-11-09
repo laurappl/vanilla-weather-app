@@ -45,11 +45,13 @@ function displayTemperature (response) {
     
 
 let iconData = response.data.weather[0].icon;
-    let iconLink = `http://openweathermap.org/img/wn/${iconData}@2x.png`;
+   let iconLink = `http://openweathermap.org/img/wn/${iconData}@2x.png`;
     let iconElement = document.querySelector("#icon");
     iconElement.setAttribute("src", iconLink);
     iconElement.setAttribute("alt", `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png` );
-   celciusTemperature = response.data.main.temp;
+     
+      
+    celciusTemperature = response.data.main.temp;
 
    let quoteElement = document.querySelector("#weather-quote");
    if (iconData === "50d" || iconData === "50n") {quoteElement.innerHTML = `"Sometimes love gets lost in a fog"`;  
@@ -86,9 +88,9 @@ let iconData = response.data.weather[0].icon;
         />
         <div class="weather-forecast-temperature">
           <strong>
-            ${Math.round(forecast.main.temp_max)}°
+            ${Math.round(forecast.main.temp_max)}°C
           </strong>
-          ${Math.round(forecast.main.temp_min)}°
+          ${Math.round(forecast.main.temp_min)}°C
         </div>
       </div>
     `;
