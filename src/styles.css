@@ -49,6 +49,10 @@ background-color:#FCD1DA;
 border: #FCD1DA;
 
 }
+.footer {
+    max-width: 800px;
+    margin: 0 auto 3px;
+  }
 .quote {
     color:#d3697e;
     font-size: 25px;
@@ -56,13 +60,9 @@ border: #FCD1DA;
     text-align: center;
     }
 
-    .small {
-
-        max-width: 800px;
-        margin-bottom: 3px;
-    }
-
-
+    .weather-forecast .col-2 {
+        text-align: center;
+      }
 .small-cap {
     text-transform: lowercase;
 }
@@ -128,7 +128,7 @@ cursor: default;
 .weather-app {
 margin: 30px auto;
 padding: 20px 16px 24px;
-border: 1px solid #FCD1DA;
+border: 2px solid #FCD1DA;
 border-radius: 8px;
 max-width: 800px;
 }
