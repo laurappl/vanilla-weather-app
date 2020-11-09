@@ -59,11 +59,13 @@ border: #FCD1DA;
     margin: 0 auto 3px;
   }
 .quote {
-    color:#d3697e;
-    font-size: 25px;
-    font-family: 'Indie Flower', cursive;
+    color:#FCD1DA;
+    font-size: 30px;
+    font-family: 'Grand Hotel', cursive;
     text-align: center;
-    }
+    position: relative;
+    
+          }
 
     .weather-forecast .col-2 {
         text-align: center;
@@ -119,8 +121,7 @@ cursor: default;
 
 .weather-temperature .active:hover {
     text-decoration: none;
-    
-    }
+        }
 
 .weather-temperature .units {
     position: relative;

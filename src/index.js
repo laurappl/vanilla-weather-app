@@ -31,6 +31,7 @@ function formatDate(timestamp) {
 function displayTemperature (response) {
     let dateElement = document.querySelector("#date");
     dateElement.innerHTML = formatDate(response.data.dt * 1000);
+    console.log(response.data);
     let temperatureElement = document.querySelector("#temperature");
     temperatureElement.innerHTML = Math.round(response.data.main.temp);
     let cityElement = document.querySelector("#city");
@@ -41,13 +42,30 @@ function displayTemperature (response) {
     humidityElement.innerHTML = response.data.main.humidity;
     let windElement = document.querySelector("#wind");
     windElement.innerHTML = Math.round(response.data.wind.speed);
-    let iconData = response.data.weather[0].icon;
+    
+
+let iconData = response.data.weather[0].icon;
     let iconLink = `http://openweathermap.org/img/wn/${iconData}@2x.png`;
     let iconElement = document.querySelector("#icon");
     iconElement.setAttribute("src", iconLink);
     iconElement.setAttribute("alt", `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png` );
    celciusTemperature = response.data.main.temp;
-   }
+
+   let quoteElement = document.querySelector("#weather-quote");
+   if (iconData === "50d" || iconData === "50n") {quoteElement.innerHTML = `"Sometimes love gets lost in a fog"`;  
+} else if (iconData === "01d" || iconData === "01n") {quoteElement.innerHTML = `"To love and be loved is to feel the sun from both sides"`;
+
+} else if (iconData === "02d" || iconData === "02n") {quoteElement.innerHTML = `"Love is like the sun coming out of the clouds and warming your soul"`;
+
+} else if (iconData === "03d" || iconData === "03n") {quoteElement.innerHTML = `"You make me happy when skies are grey ❤"`;
+} else if (iconData === "04d" || iconData === "04n") {quoteElement.innerHTML = `"The sun always shine above the clouds"`;
+} else if (iconData === "09d" || iconData === "09n") {quoteElement.innerHTML = `"Rain showers my spirit and waters my soul"`;    
+} else if (iconData === "10d" || iconData === "10n") {quoteElement.innerHTML = `"Drop everything now, meet me in the pouraing rain"`;
+} else if (iconData === "11d" || iconData === "11n") {quoteElement.innerHTML = `"If hugs were lightning, I would send you a thunderstorm"`;
+} else if (iconData === "13d" || iconData === "13n") {quoteElement.innerHTML = `"The first snow is like the first love"`;
+} else {  quoteElement.innerHTML = `"You don't need sun, all you need is love"`;
+    }
+      }
 
    function displayForecast(response) {
     let forecastElement = document.querySelector("#forecast");
@@ -111,6 +129,7 @@ function showCelciusTemperature (event) {
 fahrenheitLink.classList.remove("active");
   temperatureElement.innerHTML = Math.round(celciusTemperature);
 }
+
 
 let celciusTemperature = null;
 
