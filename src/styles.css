@@ -52,6 +52,10 @@ ul{
 .btn-primary {
 background-color:#FCD1DA;
 border: #FCD1DA;
+}
+
+.btn-primary:hover {
+    background-color:#d3697e;
 
 }
 .footer {
