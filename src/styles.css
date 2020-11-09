@@ -146,7 +146,7 @@ margin: 30px auto;
 padding: 20px 16px 24px;
 border: 2px solid #FCD1DA;
 border-radius: 8px;
-width: 80%;
+max-width: 80%;
 }
 
 /*

@@ -62,7 +62,7 @@ let iconData = response.data.weather[0].icon;
 } else if (iconData === "03d" || iconData === "03n") {quoteElement.innerHTML = `"You make me happy when skies are grey <i class="fas fa-heart"></i>"`;
 } else if (iconData === "04d" || iconData === "04n") {quoteElement.innerHTML = `"The sun always shines above the clouds"`;
 } else if (iconData === "09d" || iconData === "09n") {quoteElement.innerHTML = `"Rain showers my spirit and waters my soul"`;    
-} else if (iconData === "10d" || iconData === "10n") {quoteElement.innerHTML = `"Drop everything now, meet me in the pouraing rain"`;
+} else if (iconData === "10d" || iconData === "10n") {quoteElement.innerHTML = `"Drop everything now, meet me in the pouring rain"`;
 } else if (iconData === "11d" || iconData === "11n") {quoteElement.innerHTML = `"If hugs were lightning, I would send you a thunderstorm"`;
 } else if (iconData === "13d" || iconData === "13n") {quoteElement.innerHTML = `"The first snow is like the first love"`;
 } else {  quoteElement.innerHTML = `"You don't need sun, all you need is love"`;
