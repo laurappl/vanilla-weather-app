@@ -58,7 +58,7 @@ let iconData = response.data.weather[0].icon;
 } else if (iconData === "02d" || iconData === "02n") {quoteElement.innerHTML = `"Love is like the sun coming out of the clouds and warming your soul"`;
 
 } else if (iconData === "03d" || iconData === "03n") {quoteElement.innerHTML = `"You make me happy when skies are grey ❤"`;
-} else if (iconData === "04d" || iconData === "04n") {quoteElement.innerHTML = `"The sun always shine above the clouds"`;
+} else if (iconData === "04d" || iconData === "04n") {quoteElement.innerHTML = `"The sun always shines above the clouds"`;
 } else if (iconData === "09d" || iconData === "09n") {quoteElement.innerHTML = `"Rain showers my spirit and waters my soul"`;    
 } else if (iconData === "10d" || iconData === "10n") {quoteElement.innerHTML = `"Drop everything now, meet me in the pouraing rain"`;
 } else if (iconData === "11d" || iconData === "11n") {quoteElement.innerHTML = `"If hugs were lightning, I would send you a thunderstorm"`;
